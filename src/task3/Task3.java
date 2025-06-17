@@ -12,15 +12,12 @@ public class Task3 {
             System.out.println("Say something:");
             message = scanner.nextLine();
             char[] listOfChars = message.toCharArray();
+
             if (message.equals(":q")) break;
             for (int i = 0; i < listOfChars.length; i++) {
                 char singleChar = listOfChars[i];
                 System.out.println(singleChar + ",");
-
             }
-
-
         }
-
     }
 }
