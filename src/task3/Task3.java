@@ -6,11 +6,20 @@ public class Task3 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Inserisci un messaggio:");
-        String message = scanner.nextLine();
-        char[] arrayOfChars = message.toCharArray();
+        String message;
 
-        
-        scanner.close();
+        while (true) {
+            System.out.println("Say something:");
+            message = scanner.nextLine();
+            char[] listOfChars = message.toCharArray();
+
+            for (int i = 0; i < listOfChars.length; i++) {
+                char singleChar = listOfChars[i];
+                System.out.println(singleChar + ",");
+            }
+
+            if (message.equals(":q")) break;
+        }
+
     }
 }
